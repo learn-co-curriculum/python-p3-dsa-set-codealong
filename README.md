@@ -185,12 +185,10 @@ With that in mind, we can complete our `__init__` method by creating a `Dictiona
 and storing the values passed in as **keys** on the `Dictionary`:
 
 ```py
-class MySet:
-  def __init__(self, enumerable = []):
+def __init__(self, enumerable = []):
     self.dictionary = {}
     for value in enumerable:
-      dictionary.put(value) = True
-
+        self.dictionary[value] = True
 ```
 
 Run the tests now: the `MySet __init__()` tests should be passing. We can create new
