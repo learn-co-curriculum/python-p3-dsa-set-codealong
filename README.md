@@ -207,9 +207,9 @@ We could either use bracket notation, and check if the key is present and the
 value is truthy:
 
 ```py
-def has(value):
+def has(self, value):
 
-  return dictionary[value]
+  return self.dictionary[value]
 
 ```
 
