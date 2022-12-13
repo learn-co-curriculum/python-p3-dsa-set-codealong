@@ -220,10 +220,8 @@ Let's use the `in` keyword, which will always
 return either true or false:
 
 ```py
-def has(value):
-
-  return value in dictionary
-
+def has(self, value):
+  return value in self.dictionary
 ```
 
 Run the tests now again to pass the `MySet.has()` tests. Fantastic!
