@@ -186,10 +186,9 @@ and storing the values passed in as **keys** on the `Dictionary`:
 
 ```py
 def __init__(self, enumerable = []):
-  self.dictionary = {}
-  for value in enumerable:
-    self.dictionary[value] = True
-
+    self.dictionary = {}
+    for value in enumerable:
+        self.dictionary[value] = True
 ```
 
 Run the tests now: the `MySet __init__()` tests should be passing. We can create new
