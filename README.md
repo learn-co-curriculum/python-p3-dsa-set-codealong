@@ -2,8 +2,8 @@
 
 ## Learning Goals
 
-- Identify the use cases for a `Set`
-- Implement common methods for a `Set`
+- Identify the use cases for a `Set`.
+- Implement common methods for a `Set`.
 
 ***
 
@@ -11,7 +11,8 @@
 
 - **Sequence**: a data structure in which data is stored and accessed in a
 specific order.
-- **Stack** is a linear data structure that follows the principle of Last In First Out (LIFO)
+- **Stack** is a linear data structure that follows the principle of Last In
+First Out (LIFO).
 - **Index**: the location, represented by an integer, of an element in a
 sequence.
 - **Iterable**: able to be broken down into smaller parts of equal size that
@@ -32,6 +33,8 @@ in a fixed pattern. Iterable and indexed, just like other sequences.
 In this lesson, we'll build the definition for a `Set` class along with some of
 its common methods to get an understanding of the general approach to building
 data structures.
+
+***
 
 ## Building Data Structures From Scratch
 
@@ -60,6 +63,8 @@ When building data structures from scratch, you'll often use other built-in data
 structures to support your data structure and hold data. A key consideration
 when building on top of built-in data structures is understanding the Big O
 runtime of built-in methods, so make sure to keep this in mind.
+
+***
 
 ## When To Use a Set
 
@@ -106,6 +111,8 @@ def first_repeated_value(list):
 first_repeated_value([1,2,3,3,4,4])
 # => 3
 ```
+
+***
 
 ## Defining a Set Class
 
@@ -179,10 +186,9 @@ and storing the values passed in as **keys** on the `Dictionary`:
 
 ```py
 def __init__(self, enumerable = []):
-  self.dictionary = {}
-  for value in enumerable:
-    self.dictionary[value] = True
-
+    self.dictionary = {}
+    for value in enumerable:
+        self.dictionary[value] = True
 ```
 
 Run the tests now: the `MySet __init__()` tests should be passing. We can create new
@@ -201,9 +207,9 @@ We could either use bracket notation, and check if the key is present and the
 value is truthy:
 
 ```py
-def has(value):
+def has(self, value):
 
-  return dictionary[value]
+  return self.dictionary[value]
 
 ```
 
@@ -214,10 +220,8 @@ Let's use the `in` keyword, which will always
 return either true or false:
 
 ```py
-def has(value):
-
-  return value in dictionary
-
+def has(self, value):
+  return value in self.dictionary
 ```
 
 Run the tests now again to pass the `MySet.has()` tests. Fantastic!
@@ -301,7 +305,9 @@ able to better understand the use cases for this data structure, as well as the
 runtime of common methods. Keep in mind that the runtime of our data structure
 will depend on what data structure(s) it uses under the hood.
 
-## Complete code
+***
+
+## Solution Code
 
 ```py
 class MySet:
@@ -333,7 +339,10 @@ class MySet:
 
     def clear(self):
         self.dictionary.clear()
+
 ```
+
+***
 
 ## Resources
 
@@ -342,5 +351,3 @@ class MySet:
 
 [python set]: https://docs.python.org/3/tutorial/datastructures.html#sets
 [js set]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
-
-***
