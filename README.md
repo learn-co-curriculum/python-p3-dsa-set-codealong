@@ -257,9 +257,9 @@ argument the default is an exception.
 `None`:
 
 ```py
-    def delete(self, value):
-        self.dictionary.pop(value, None)
-        return self
+def delete(self, value):
+  self.dictionary.pop(value, None)
+  return self
 ```
 
 ### `MySet.size()`
@@ -268,9 +268,8 @@ Last one! The `size()` method simply needs to return the number of elements in
 the set.
 
 ```py
-def size:
-  len(self.dictionary)
-
+def size(self):
+  return len(self.dictionary)
 ```
 
 ### Bonus
